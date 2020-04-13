@@ -1,18 +1,21 @@
 package builder;
 
-class PDFConverter extends TextConveter {
+class PDFConverter extends TextConveterBuilder {
+
+	@Override
+	public void characterConverter() {
+		textConverter.character = "PDF Character";
+	}
 	
-	public void characterPDF(char c) {
- 		System.out.print("PDF Character");
- 	}
-
- 	public void paragraphConverter() {
- 		System.out.print("PDF Paragraph");
- 	}
-
- 	public void fontConverter(String fonte) {
- 		System.out.print("PDF Font");
- 	}
+	@Override
+	public void paragraphConverter() {
+		textConverter.paragraph = "PDF Paragraph";
+	}
+	
+	@Override
+	public void fontConverter() {
+		textConverter.font = "PDF Font";
+	}
  }
 
 

@@ -1,17 +1,20 @@
 package builder;
 
-class DOCConverter extends TextConveter {
+class DOCConverter extends TextConveterBuilder {
+
+	@Override
+	public void characterConverter() {
+		textConverter.character = "DOC Character";
+	}
 	
-	public void characterPDF(char c) {
- 		System.out.print("DOC Character");
- 	}
+	@Override
+	public void paragraphConverter() {
+		textConverter.paragraph = "DOC Paragraph";
+	}
 
- 	public void paragraphConverter() {
- 		System.out.print("DOC Paragraph");
- 	}
-
- 	public void fontConverter(String fonte) {
- 		System.out.print("DOC Font");
- 	}
+	@Override
+	public void fontConverter() {
+		textConverter.font = "DOC Font";
+	}
 }
  	
